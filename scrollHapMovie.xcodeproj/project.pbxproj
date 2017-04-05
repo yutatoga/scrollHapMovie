@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		9DECE28DE972DD39553DD35C /* ofxHapPlayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3A8B29F47FD67274D82443D /* ofxHapPlayer.cpp */; };
+		B2E18ABD1E94B52800183365 /* ofxBaseGui.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B2E18AAC1E94B52800183365 /* ofxBaseGui.cpp */; };
+		B2E18ABE1E94B52800183365 /* ofxButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B2E18AAE1E94B52800183365 /* ofxButton.cpp */; };
+		B2E18ABF1E94B52800183365 /* ofxGuiGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B2E18AB11E94B52800183365 /* ofxGuiGroup.cpp */; };
+		B2E18AC01E94B52800183365 /* ofxLabel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B2E18AB31E94B52800183365 /* ofxLabel.cpp */; };
+		B2E18AC11E94B52800183365 /* ofxPanel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B2E18AB51E94B52800183365 /* ofxPanel.cpp */; };
+		B2E18AC21E94B52800183365 /* ofxSlider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B2E18AB71E94B52800183365 /* ofxSlider.cpp */; };
+		B2E18AC31E94B52800183365 /* ofxSliderGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B2E18AB91E94B52800183365 /* ofxSliderGroup.cpp */; };
+		B2E18AC41E94B52800183365 /* ofxToggle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B2E18ABB1E94B52800183365 /* ofxToggle.cpp */; };
 		D58D428A766F04E0F7BE51A5 /* HapSupport.c in Sources */ = {isa = PBXBuildFile; fileRef = 061A451497285ADBAF4C6AC5 /* HapSupport.c */; };
 		E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
 		E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1D0A3A1BDC003C02F2 /* main.cpp */; };
@@ -47,6 +55,23 @@
 		061A451497285ADBAF4C6AC5 /* HapSupport.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 30; name = HapSupport.c; path = ../../../addons/ofxHapPlayer/libs/HapSupport/src/HapSupport.c; sourceTree = SOURCE_ROOT; };
 		4B1A217C1373D539F9E2880E /* HapSupport.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = HapSupport.h; path = ../../../addons/ofxHapPlayer/libs/HapSupport/src/HapSupport.h; sourceTree = SOURCE_ROOT; };
 		A9816531495AFFBC1BB87CF3 /* ofxHapPlayer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxHapPlayer.h; path = ../../../addons/ofxHapPlayer/src/ofxHapPlayer.h; sourceTree = SOURCE_ROOT; };
+		B2E18AAC1E94B52800183365 /* ofxBaseGui.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxBaseGui.cpp; sourceTree = "<group>"; };
+		B2E18AAD1E94B52800183365 /* ofxBaseGui.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxBaseGui.h; sourceTree = "<group>"; };
+		B2E18AAE1E94B52800183365 /* ofxButton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxButton.cpp; sourceTree = "<group>"; };
+		B2E18AAF1E94B52800183365 /* ofxButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxButton.h; sourceTree = "<group>"; };
+		B2E18AB01E94B52800183365 /* ofxGui.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxGui.h; sourceTree = "<group>"; };
+		B2E18AB11E94B52800183365 /* ofxGuiGroup.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxGuiGroup.cpp; sourceTree = "<group>"; };
+		B2E18AB21E94B52800183365 /* ofxGuiGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxGuiGroup.h; sourceTree = "<group>"; };
+		B2E18AB31E94B52800183365 /* ofxLabel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxLabel.cpp; sourceTree = "<group>"; };
+		B2E18AB41E94B52800183365 /* ofxLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxLabel.h; sourceTree = "<group>"; };
+		B2E18AB51E94B52800183365 /* ofxPanel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxPanel.cpp; sourceTree = "<group>"; };
+		B2E18AB61E94B52800183365 /* ofxPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxPanel.h; sourceTree = "<group>"; };
+		B2E18AB71E94B52800183365 /* ofxSlider.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxSlider.cpp; sourceTree = "<group>"; };
+		B2E18AB81E94B52800183365 /* ofxSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxSlider.h; sourceTree = "<group>"; };
+		B2E18AB91E94B52800183365 /* ofxSliderGroup.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxSliderGroup.cpp; sourceTree = "<group>"; };
+		B2E18ABA1E94B52800183365 /* ofxSliderGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxSliderGroup.h; sourceTree = "<group>"; };
+		B2E18ABB1E94B52800183365 /* ofxToggle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxToggle.cpp; sourceTree = "<group>"; };
+		B2E18ABC1E94B52800183365 /* ofxToggle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxToggle.h; sourceTree = "<group>"; };
 		B3A8B29F47FD67274D82443D /* ofxHapPlayer.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxHapPlayer.cpp; path = ../../../addons/ofxHapPlayer/src/ofxHapPlayer.cpp; sourceTree = SOURCE_ROOT; };
 		E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openFrameworksLib.xcodeproj; path = ../../../libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj; sourceTree = SOURCE_ROOT; };
 		E4B69B5B0A3A1756003C02F2 /* scrollHapMovieDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = scrollHapMovieDebug.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,9 +136,43 @@
 			name = src;
 			sourceTree = "<group>";
 		};
+		B2E18AAA1E94B52800183365 /* ofxGui */ = {
+			isa = PBXGroup;
+			children = (
+				B2E18AAB1E94B52800183365 /* src */,
+			);
+			name = ofxGui;
+			path = ../../../addons/ofxGui;
+			sourceTree = "<group>";
+		};
+		B2E18AAB1E94B52800183365 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				B2E18AAC1E94B52800183365 /* ofxBaseGui.cpp */,
+				B2E18AAD1E94B52800183365 /* ofxBaseGui.h */,
+				B2E18AAE1E94B52800183365 /* ofxButton.cpp */,
+				B2E18AAF1E94B52800183365 /* ofxButton.h */,
+				B2E18AB01E94B52800183365 /* ofxGui.h */,
+				B2E18AB11E94B52800183365 /* ofxGuiGroup.cpp */,
+				B2E18AB21E94B52800183365 /* ofxGuiGroup.h */,
+				B2E18AB31E94B52800183365 /* ofxLabel.cpp */,
+				B2E18AB41E94B52800183365 /* ofxLabel.h */,
+				B2E18AB51E94B52800183365 /* ofxPanel.cpp */,
+				B2E18AB61E94B52800183365 /* ofxPanel.h */,
+				B2E18AB71E94B52800183365 /* ofxSlider.cpp */,
+				B2E18AB81E94B52800183365 /* ofxSlider.h */,
+				B2E18AB91E94B52800183365 /* ofxSliderGroup.cpp */,
+				B2E18ABA1E94B52800183365 /* ofxSliderGroup.h */,
+				B2E18ABB1E94B52800183365 /* ofxToggle.cpp */,
+				B2E18ABC1E94B52800183365 /* ofxToggle.h */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
 		BB4B014C10F69532006C3DED /* addons */ = {
 			isa = PBXGroup;
 			children = (
+				B2E18AAA1E94B52800183365 /* ofxGui */,
 				123746A97018087522D6BDFF /* ofxHapPlayer */,
 			);
 			name = addons;
@@ -256,9 +315,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
+				B2E18ABE1E94B52800183365 /* ofxButton.cpp in Sources */,
+				B2E18AC21E94B52800183365 /* ofxSlider.cpp in Sources */,
+				B2E18AC01E94B52800183365 /* ofxLabel.cpp in Sources */,
 				E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */,
+				B2E18AC41E94B52800183365 /* ofxToggle.cpp in Sources */,
+				B2E18AC31E94B52800183365 /* ofxSliderGroup.cpp in Sources */,
+				B2E18ABF1E94B52800183365 /* ofxGuiGroup.cpp in Sources */,
+				B2E18ABD1E94B52800183365 /* ofxBaseGui.cpp in Sources */,
 				9DECE28DE972DD39553DD35C /* ofxHapPlayer.cpp in Sources */,
 				D58D428A766F04E0F7BE51A5 /* HapSupport.c in Sources */,
+				B2E18AC11E94B52800183365 /* ofxPanel.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,6 +433,7 @@
 					../../../addons/ofxHapPlayer/libs/HapSupport,
 					../../../addons/ofxHapPlayer/libs/HapSupport/src,
 					../../../addons/ofxHapPlayer/src,
+					../../../addons/ofxGui/src,
 				);
 				ICON = "$(ICON_NAME_DEBUG)";
 				ICON_FILE = "$(ICON_FILE_PATH)$(ICON)";
@@ -398,6 +466,7 @@
 					../../../addons/ofxHapPlayer/libs/HapSupport,
 					../../../addons/ofxHapPlayer/libs/HapSupport/src,
 					../../../addons/ofxHapPlayer/src,
+					../../../addons/ofxGui/src,
 				);
 				ICON = "$(ICON_NAME_RELEASE)";
 				ICON_FILE = "$(ICON_FILE_PATH)$(ICON)";

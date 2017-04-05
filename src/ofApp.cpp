@@ -2,6 +2,17 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
+    // gui
+    // we add this listener before setting up so the initial circle resolution is correct
+    guiMovingSpeed.addListener(this, &ofApp::guiMovingSpeedChanged);
+    
+    showGui = true;
+    panel.setup();
+    panel.add(guiFps.set("FPS", ""));
+    panel.add(enableDrawAllPlayers.set("drawAllPlayers", false));
+    panel.add(guiMovingSpeed.set("moving speed", ofVec2f(10, 0), ofVec2f(0, 0), ofVec2f(30, 30)));
+    panel.add(shortCutInfo.setup("hide/show GUI", "type h"));
+    
     //some path, may be absolute or relative to bin/data
     string path = "movies";
     ofDirectory dir(path);
@@ -25,13 +36,17 @@ void ofApp::setup(){
         ofLogNotice(dir.getPath(i));
     }
     scrollPlayer.rightViewPosition.set(0, 0);
-    scrollPlayer.movingSpeed.set(10, 0);
+    scrollPlayer.movingSpeed.set(guiMovingSpeed);
     
     // set window
     if (scrollPlayer.players[0]->isLoaded()) {
         ofSetWindowShape(scrollPlayer.players[0]->getWidth(), scrollPlayer.players[0]->getHeight());
         ofSetWindowPosition(0, 0);
     }
+}
+
+void ofApp::guiMovingSpeedChanged(ofVec2f &guiMovingSpeed){
+    scrollPlayer.movingSpeed = guiMovingSpeed;
 }
 
 //--------------------------------------------------------------
@@ -53,6 +68,9 @@ void ofApp::update(){
         if(playerIndex != 0) scrollPlayer.players[playerIndex]->setFrame(scrollPlayer.players[0]->getCurrentFrame());
         scrollPlayer.players[playerIndex]->update();
     }
+    
+    // gui
+    guiFps = ofToString(ofGetFrameRate(), 0);
 }
 
 //--------------------------------------------------------------
@@ -65,7 +83,10 @@ void ofApp::draw(){
     }
     
     // debug
-    ofApp::drawAllPlayers();
+    if(enableDrawAllPlayers)ofApp::drawAllPlayers();
+    
+    // gui
+    if(showGui)panel.draw();
 }
 
 
@@ -77,7 +98,14 @@ void ofApp::drawAllPlayers(){
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
-
+    switch (key) {
+        case 'h': // hide or show gui
+            showGui = !showGui;
+            showGui ? ofShowCursor() : ofHideCursor();
+            break;
+        default:
+            break;
+    }
 }
 
 //--------------------------------------------------------------

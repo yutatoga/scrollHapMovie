@@ -2,6 +2,7 @@
 
 #include "ofMain.h"
 #include "ofxHapPlayer.h"
+#include "ofxGui.h"
 
 class ScrollPlayer{
 public:
@@ -29,9 +30,19 @@ class ofApp : public ofBaseApp{
 		void windowResized(int w, int h);
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
-	
+
+    void guiMovingSpeedChanged(ofVec2f &guiMovingSpeed);
+    
     // debug
     void drawAllPlayers();
     
     ScrollPlayer scrollPlayer;
+    
+    // gui
+    bool showGui;
+    ofxPanel panel;
+    ofParameter<ofVec2f> guiMovingSpeed;
+    ofParameter<string> guiFps;
+    ofParameter<bool> enableDrawAllPlayers;
+    ofxLabel shortCutInfo;
 };
