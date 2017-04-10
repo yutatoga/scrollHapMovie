@@ -4,6 +4,14 @@
 #include "ofxHapPlayer.h"
 #include "ofxGui.h"
 
+#define SPEED_MINIMUM_X 0
+#define SPEED_MINIMUM_Y 0
+
+#define SPEED_MAXIMUM_X 30
+#define SPEED_MAXIMUM_Y 30
+
+#define FRAME_RATE 60
+
 class ScrollPlayer{
 public:
     vector<shared_ptr<ofxHapPlayer>> players;

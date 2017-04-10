@@ -10,7 +10,7 @@ void ofApp::setup(){
     panel.setup();
     panel.add(guiFps.set("FPS", ""));
     panel.add(enableDrawAllPlayers.set("drawAllPlayers", false));
-    panel.add(guiMovingSpeed.set("moving speed", ofVec2f(10, 0), ofVec2f(0, 0), ofVec2f(30, 30)));
+    panel.add(guiMovingSpeed.set("moving speed", ofVec2f(10, 0), ofVec2f(SPEED_MINIMUM_X, SPEED_MAXIMUM_Y), ofVec2f(SPEED_MAXIMUM_X, SPEED_MAXIMUM_Y)));
     panel.add(shortCutInfo.setup("hide/show GUI", "type h"));
     
     //some path, may be absolute or relative to bin/data
@@ -43,6 +43,8 @@ void ofApp::setup(){
         ofSetWindowShape(scrollPlayer.players[0]->getWidth(), scrollPlayer.players[0]->getHeight());
         ofSetWindowPosition(0, 0);
     }
+    
+    ofSetFrameRate(FRAME_RATE);
 }
 
 void ofApp::guiMovingSpeedChanged(ofVec2f &guiMovingSpeed){
@@ -52,7 +54,7 @@ void ofApp::guiMovingSpeedChanged(ofVec2f &guiMovingSpeed){
 //--------------------------------------------------------------
 void ofApp::update(){
     // update position
-    scrollPlayer.rightViewPosition += scrollPlayer.movingSpeed;
+    scrollPlayer.rightViewPosition += scrollPlayer.movingSpeed * (ofGetTargetFrameRate() * ofGetLastFrameTime());
     
     // when the rightViewPosition has reached/passed the end point
     if(scrollPlayer.rightViewPosition.x >= scrollPlayer.players[0]->getWidth()){
