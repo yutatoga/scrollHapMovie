@@ -67,7 +67,7 @@ void ofApp::update(){
     // update 3 of players which are right view, left view, standby view.
     for(int i = scrollPlayer.rightViewId; i < scrollPlayer.rightViewId+3; i++){
         int playerIndex = i%(int)scrollPlayer.players.size();
-        if(playerIndex != 0) scrollPlayer.players[playerIndex]->setFrame(scrollPlayer.players[0]->getCurrentFrame());
+        if(playerIndex != 0) scrollPlayer.players[playerIndex]->setPosition(scrollPlayer.players[0]->getPosition());
         scrollPlayer.players[playerIndex]->update();
     }
     
