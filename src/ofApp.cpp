@@ -91,11 +91,40 @@ void ofApp::draw(){
     if(showGui)panel.draw();
 }
 
-
 void ofApp::drawAllPlayers(){
+    // draw background
+    // rightView
+    ofSetColor(255);
+    ofVec2f rightViewPosition = getPlayerPosition(scrollPlayer.rightViewId);
+    ofDrawRectangle(rightViewPosition.x-1, rightViewPosition.y-1, DEBUG_PLAYER_WIDTH+2, DEBUG_PLAYER_HEIGHT+2);
+    
+    // second right view
+    int secondRightViewId = (scrollPlayer.rightViewId+1)%(int)scrollPlayer.players.size();
+    ofVec2f secondRightViewPosition = getPlayerPosition(secondRightViewId);
+    ofSetColor(127);
+    ofDrawRectangle(secondRightViewPosition.x-1, secondRightViewPosition.y-1, DEBUG_PLAYER_WIDTH+2, DEBUG_PLAYER_HEIGHT+2);
+    
+    // third right view
+    int thirdRightViewId = (scrollPlayer.rightViewId+2)%(int)scrollPlayer.players.size();
+    ofVec2f thirdRightViewPosition = getPlayerPosition(thirdRightViewId);
+    ofSetColor(64);
+    ofDrawRectangle(thirdRightViewPosition.x-1, thirdRightViewPosition.y-1, DEBUG_PLAYER_WIDTH+2, DEBUG_PLAYER_HEIGHT+2);
+    
+    // reset the color
+    ofSetColor(255);
+    
+    // draw players
     for (int i = 0; i < (int)scrollPlayer.players.size(); i++){
-        if (scrollPlayer.players[i]->isLoaded()) scrollPlayer.players[i]->draw(20+i%5*150, 30 + i/5*100, 128, 72);
+        if (scrollPlayer.players[i]->isLoaded()) {
+            ofVec2f playerPosition = getPlayerPosition(i);
+            scrollPlayer.players[i]->draw(playerPosition.x, playerPosition.y, DEBUG_PLAYER_WIDTH, DEBUG_PLAYER_HEIGHT);
+        }
     }
+}
+
+ofVec2f ofApp::getPlayerPosition(int playerIndex) {
+    ofVec2f origin = panel.getShape().getBottomLeft() + ofPoint(0, 10);
+    return (ofVec2f(origin.x+playerIndex%5*(DEBUG_PLAYER_WIDTH+20), origin.y+playerIndex/5*(DEBUG_PLAYER_HEIGHT+20)));
 }
 
 //--------------------------------------------------------------

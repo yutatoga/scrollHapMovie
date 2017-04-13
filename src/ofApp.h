@@ -12,6 +12,9 @@
 
 #define FRAME_RATE 60
 
+#define DEBUG_PLAYER_WIDTH 128
+#define DEBUG_PLAYER_HEIGHT 72
+
 class ScrollPlayer{
 public:
     vector<shared_ptr<ofxHapPlayer>> players;
@@ -43,6 +46,7 @@ class ofApp : public ofBaseApp{
     
     // debug
     void drawAllPlayers();
+    ofVec2f getPlayerPosition(int playerIndex);
     
     ScrollPlayer scrollPlayer;
     
