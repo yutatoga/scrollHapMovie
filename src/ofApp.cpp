@@ -10,7 +10,7 @@ void ofApp::setup(){
     panel.setup();
     panel.add(guiFps.set("FPS", ""));
     panel.add(enableDrawAllPlayers.set("drawAllPlayers", false));
-    panel.add(guiMovingSpeed.set("moving speed", ofVec2f(10, 0), ofVec2f(SPEED_MINIMUM_X, SPEED_MAXIMUM_Y), ofVec2f(SPEED_MAXIMUM_X, SPEED_MAXIMUM_Y)));
+    panel.add(guiMovingSpeed.set("moving speed", ofVec2f(10, 0), ofVec2f(SPEED_MINIMUM_X, SPEED_MINIMUM_Y), ofVec2f(SPEED_MAXIMUM_X, SPEED_MAXIMUM_Y)));
     panel.add(shortCutInfo.setup("hide/show GUI", "type h"));
     
     //some path, may be absolute or relative to bin/data
